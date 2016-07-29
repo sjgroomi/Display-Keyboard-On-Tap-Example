@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="K9Z-pE-IUE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Keyboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Display_Keyboard_on_Tap_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,6 +47,7 @@
                             <constraint firstItem="CmT-Ea-mNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pdv-rt-qVv"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Keyboard" id="KH8-fr-tQE"/>
                     <connections>
                         <outlet property="control" destination="CmT-Ea-mNK" id="m6I-eX-2dq"/>
                         <outlet property="label" destination="r6c-YS-bs1" id="eU9-Sr-dWo"/>
@@ -53,6 +55,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1103" y="-305"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MoN-U4-usx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="K9Z-pE-IUE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="8uM-FI-vwo">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="DX9-Po-rk7"/>
+                        <segue destination="yhi-sV-zV5" kind="relationship" relationship="viewControllers" id="zKA-Sk-3bR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eph-sV-6RW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Picker-->
+        <scene sceneID="fPe-QG-Gns">
+            <objects>
+                <viewController id="yhi-sV-zV5" customClass="DateChooserViewController" customModule="Display_Keyboard_on_Tap_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iYx-bw-PM2"/>
+                        <viewControllerLayoutGuide type="bottom" id="jXU-rw-jMH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HOt-dU-l3I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQM-J4-Kcp" customClass="FirstResponderControl" customModule="Display_Keyboard_on_Tap_Example" customModuleProvider="target">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cI4-ZR-dGb">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99170845750000003" green="0.58130258319999994" blue="0.033975753929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cI4-ZR-dGb" secondAttribute="trailing" constant="20" id="ZLw-aU-dAU"/>
+                                    <constraint firstItem="cI4-ZR-dGb" firstAttribute="leading" secondItem="jQM-J4-Kcp" secondAttribute="leading" constant="20" id="kyc-yb-Xlt"/>
+                                    <constraint firstItem="cI4-ZR-dGb" firstAttribute="top" secondItem="jQM-J4-Kcp" secondAttribute="top" constant="20" id="vHb-JB-0wP"/>
+                                    <constraint firstAttribute="bottom" secondItem="cI4-ZR-dGb" secondAttribute="bottom" constant="20" id="wDc-hZ-F71"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-b7-h6t">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BOR-b7-h6t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HOt-dU-l3I" secondAttribute="leadingMargin" constant="20" id="4cn-dY-JVE"/>
+                            <constraint firstItem="jQM-J4-Kcp" firstAttribute="centerY" secondItem="HOt-dU-l3I" secondAttribute="centerY" id="Epj-1h-B7l"/>
+                            <constraint firstItem="jQM-J4-Kcp" firstAttribute="centerX" secondItem="HOt-dU-l3I" secondAttribute="centerX" id="QVz-33-jdG"/>
+                            <constraint firstItem="BOR-b7-h6t" firstAttribute="centerX" secondItem="HOt-dU-l3I" secondAttribute="centerX" id="S68-Ne-vXe"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="BOR-b7-h6t" secondAttribute="trailing" constant="20" id="i50-Vo-UMo"/>
+                            <constraint firstItem="jQM-J4-Kcp" firstAttribute="top" secondItem="BOR-b7-h6t" secondAttribute="bottom" constant="8" id="oIB-BE-HEM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Picker" id="BUi-yi-ZT1"/>
+                    <connections>
+                        <outlet property="control" destination="jQM-J4-Kcp" id="uct-Ti-6Ci"/>
+                        <outlet property="label" destination="BOR-b7-h6t" id="aoQ-xe-yNp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJA-GQ-lNW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="416"/>
         </scene>
     </scenes>
 </document>

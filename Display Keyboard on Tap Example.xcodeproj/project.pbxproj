@@ -13,6 +13,7 @@
 		0242B52A1D4A918000608557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0242B5291D4A918000608557 /* Assets.xcassets */; };
 		0242B52D1D4A918000608557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0242B52B1D4A918000608557 /* LaunchScreen.storyboard */; };
 		0242B5351D4A919E00608557 /* FirstResponderControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0242B5341D4A919E00608557 /* FirstResponderControl.swift */; };
+		02D951FD1D4BEDE3000731DD /* DateChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D951FC1D4BEDE3000731DD /* DateChooserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0242B52C1D4A918000608557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0242B52E1D4A918000608557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0242B5341D4A919E00608557 /* FirstResponderControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstResponderControl.swift; sourceTree = "<group>"; };
+		02D951FC1D4BEDE3000731DD /* DateChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateChooserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0242B52B1D4A918000608557 /* LaunchScreen.storyboard */,
 				0242B52E1D4A918000608557 /* Info.plist */,
 				0242B5341D4A919E00608557 /* FirstResponderControl.swift */,
+				02D951FC1D4BEDE3000731DD /* DateChooserViewController.swift */,
 			);
 			path = "Display Keyboard on Tap Example";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				0242B5251D4A918000608557 /* ViewController.swift in Sources */,
 				0242B5351D4A919E00608557 /* FirstResponderControl.swift in Sources */,
+				02D951FD1D4BEDE3000731DD /* DateChooserViewController.swift in Sources */,
 				0242B5231D4A918000608557 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +303,7 @@
 				0242B5331D4A918000608557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

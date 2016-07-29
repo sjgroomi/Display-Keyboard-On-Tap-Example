@@ -12,6 +12,7 @@ class ViewController: UIViewController, FirstResponderControlDelegate {
 
     @IBOutlet weak var control: FirstResponderControl!
     @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
